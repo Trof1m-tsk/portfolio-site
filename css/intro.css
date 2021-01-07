@@ -1,0 +1,121 @@
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.intro__container {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.intro__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 20%;
+}
+
+.intro__photo {
+    height: 400px;
+    width: 940px;
+    align-self: center;
+}
+
+.intro__btn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255, 0.2);
+    position: relative;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    outline: none;
+    z-index: 15;
+    transition: all ease 0.3s;
+}
+
+.intro__btn span {
+    display: none;
+    width: 50%;
+    height: 0;
+    background-color: darkgray;
+    border: 2px solid darkgray;
+    outline: none;
+    transition: all ease 0.3s;
+}
+
+.intro__btn:hover span {
+    border-color: black;
+    background-color: black;
+}
+
+.intro__btn span:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.intro__btn:hover {
+    border: 1px solid black;    
+}
+
+.intro__btn:active {
+    background-color: darkgrey;
+    border-color: transparent;
+}
+
+.intro__btn:active span {
+    border-color: white;
+}
+
+.intro__btn--opened {
+    transform: rotate(90deg);
+}
+
+.intro__btn--opened span:first-child {
+    width: 30%;
+    transform: translateX(-10px) translateY(3px) rotate(-45deg);
+}
+
+.intro__btn--opened span:last-child {
+    width: 30%;
+    transform: translateX(-10px) translateY(-3px) rotate(45deg);
+}
+
+.intro__btn--scrolled {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    .intro__container {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .intro__name {
+        margin-right: 0;
+    }
+
+    .intro__description {
+        display: none;
+    }
+    
+    .intro__photo {
+        /* width: 150%; */
+        left: -60%;
+    }
+
+    .intro__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro__btn span {
+        display: block;
+    }
+}
