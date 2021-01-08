@@ -19,8 +19,8 @@
 }
 
 .intro__photo {
-    height: 400px;
-    width: 940px;
+    height: 380px;
+    /* width: 1110px; */
     align-self: center;
 }
 
