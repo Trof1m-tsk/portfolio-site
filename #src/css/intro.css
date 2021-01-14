@@ -20,7 +20,10 @@
 
 .intro__photo {
     height: 380px;
-    /* width: 1110px; */
+}
+
+.intro__photo,
+.intro picture {
     align-self: center;
 }
 
@@ -103,8 +106,7 @@
         display: none;
     }
     
-    .intro__photo {
-        /* width: 150%; */
+    .intro__photo{
         left: -60%;
     }
 
